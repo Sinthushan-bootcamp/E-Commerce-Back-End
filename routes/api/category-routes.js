@@ -27,9 +27,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const newCategory = req.body;
-    const response = await Category.create(newCategory);
-    res.status(200).json(response);
+    const newCategory = await Category.create(req.body);
+    res.status(200).json(newCategory);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -37,16 +36,16 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const response = await Category.update(req.body, {
+    const updatedCategory = await Category.update(req.body, {
       where: {
         id: req.params.id,
       },
     });
-    if (!response[0]) {
+    if (!updatedCategory[0]) {
       res.status(404).json({ message: 'No category with this id!' });
       return;
     }
-    res.status(200).json(response);
+    res.status(200).json(updatedCategory);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -54,16 +53,16 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const response = await Category.destroy({
+    const deletedCategory = await Category.destroy({
       where: {
         id: req.params.id,
       },
     });
-    if (!response) {
-      res.status(404).json({ message: 'No user with this id!' });
+    if (!deletedCategory) {
+      res.status(404).json({ message: 'No category with this id!' });
       return;
     }
-    res.status(200).json(response);
+    res.status(200).json(deletedCategory);
   } catch (err) {
     res.status(500).json(err);
   }
