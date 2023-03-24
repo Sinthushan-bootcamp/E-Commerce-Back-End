@@ -37,17 +37,17 @@ First clone the repo and from the command line CD into the directory. Once in th
 5. The end points are as follows:
     * Get all categories **GET:** http://localhost:3001/api/categories
     * Get a specific category **GET:** http://localhost:3001/api/categories/:id
-    * Add a new category **POST:** http://localhost:3001/api/categories
+    * Create a new category **POST:** http://localhost:3001/api/categories
     * Update a category **PUT:** http://localhost:3001/api/categories/:id
     * Delete a category **DELETE:** http://localhost:3001/api/categories/:id
     * Get all products **GET:** http://localhost:3001/api/products
     * Get a specific product **GET:** http://localhost:3001/api/products/:id
-    * Add a new product **POST:** http://localhost:3001/api/products
+    * Create a new product **POST:** http://localhost:3001/api/products
     * Update a product **PUT:** http://localhost:3001/api/products/:id
     * Delete a product **DELETE:** http://localhost:3001/api/products/:id
     * Get all tags **GET:** http://localhost:3001/api/tags
     * Get a specific tag **GET:** http://localhost:3001/api/tags/:id
-    * Add a new tag **POST:** http://localhost:3001/api/tags
+    * Create a new tag **POST:** http://localhost:3001/api/tags
     * Update a tag **PUT:** http://localhost:3001/api/tags/:id
     * Delete a tag **DELETE:** http://localhost:3001/api/tags/:id
 

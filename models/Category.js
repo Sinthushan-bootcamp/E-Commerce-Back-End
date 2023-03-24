@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
-
+// initialize Category model with 2 columns id and category_name
 Category.init(
   {
     id: {
@@ -20,9 +20,9 @@ Category.init(
   {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
+    freezeTableName: true,// ensures the name stays consistent
     underscored: true,
-    modelName: 'category',
+    modelName: 'category',// in the db the table will be named category
   }
 );
 
